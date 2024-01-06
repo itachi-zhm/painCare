@@ -13,6 +13,7 @@
     
     <p><strong>Nom:</strong> ${sessionScope.user.name}</p>
     <p><strong>Email:</strong> ${sessionScope.user.email}</p>
+    <img src="${sessionScope.user.avatar}" alt="Avatar de ${sessionScope.user.name}" width="100" height="100">
 
 </c:if>
 	<form action="update_user" method="get">

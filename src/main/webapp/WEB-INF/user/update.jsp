@@ -10,7 +10,7 @@
 	
     <h1>Update User Information</h1>
 	<c:if test="${sessionScope.user ne null}">
-    <form action="update_user" method="post" >
+    <form action="update_user" method="post" enctype="multipart/form-data">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" value="${sessionScope.user.name }" required><br>
 
@@ -20,8 +20,8 @@
         <label for="birthDay">Birthday:</label>
         <input type="date" id="birthDay" name="birthDay" value="${sessionScope.user.birthDay }" required><br>
 
-        <label for="avatar">Avatar:</label>
-        <input type="file" id="avatar" name="avatar" value="${sessionScope.user.avatar }" accept="image/*"><br>
+        <label for="avatar">Avatar :</label>
+		<input name="avatar" type="file"  id="avatar" placeholder="Avatar" accept="image/*">
 
         <input type="submit" value="Update">
     </form>
