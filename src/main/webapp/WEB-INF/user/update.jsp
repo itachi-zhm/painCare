@@ -21,7 +21,7 @@
         <input type="date" id="birthDay" name="birthDay" value="${sessionScope.user.birthDay }" required><br>
 
         <label for="avatar">Avatar :</label>
-		<input name="avatar" type="file"  id="avatar" placeholder="Avatar" accept="image/*">
+		<input name="avatar" type="file"  id="avatar" value="${sessionScope.user.avatar } placeholder="Avatar" accept="image/*">
 
         <input type="submit" value="Update">
     </form>

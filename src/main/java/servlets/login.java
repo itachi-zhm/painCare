@@ -16,7 +16,7 @@ import daos.user_dao;
 /**
  * Servlet implementation class login
  */
-
+@WebServlet(name="login", value= {"/login"})
 public class login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private user_dao utilisateur_dao;
@@ -54,7 +54,7 @@ public class login extends HttpServlet {
 
             HttpSession session = request.getSession();
             session.setAttribute("user", utilisateur);
-            request.getRequestDispatcher("/WEB-INF/user/home.jsp").forward(request, response);
+            response.sendRedirect("home_page");
         } else {
             // Afficher un message d'erreur si la connexion échoue
             request.setAttribute("erreurMessage", "Adresse e-mail ou mot de passe incorrect");

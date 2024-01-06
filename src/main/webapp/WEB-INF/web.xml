@@ -69,4 +69,24 @@
     <servlet-name>logout</servlet-name>
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>home_page</display-name>
+    <servlet-name>home_page</servlet-name>
+    <servlet-class>servlets.home_page</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>home_page</servlet-name>
+    <url-pattern>/home_page</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>create_post</display-name>
+    <servlet-name>create_post</servlet-name>
+    <servlet-class>servlets.post.create_post</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>create_post</servlet-name>
+    <url-pattern>/create_post</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import daos.post.post_dao;
+import daos.post.post_dao_impl;
+
 
 
 public class dao_factory {
@@ -38,5 +41,8 @@ public class dao_factory {
         return new user_dao_impl(this);
     }
     
+    public post_dao get_post_dao() {
+        return new post_dao_impl(this);
+    }
     
 }

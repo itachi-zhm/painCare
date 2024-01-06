@@ -26,6 +26,9 @@
 	<form action="logout" method="post">
 		<input type="submit" value="logout">
 	</form>
+	<form action="create_post" method="get">
+		<input type="submit" value="poster  ">
+	</form>
 	
 </body>
 </html>

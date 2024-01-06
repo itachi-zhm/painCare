@@ -51,7 +51,6 @@ public class user_dao_impl implements user_dao{
 			preparedStatement = connexion.prepareStatement(query_utilisateur, PreparedStatement.RETURN_GENERATED_KEYS);
             // Hacher le mot de passe avant de l'insérer
             String hashedPassword = hashPassword(utilisateur.getPassword());
-            utilisateur.toString();
             preparedStatement.setString(1, utilisateur.getName());
             preparedStatement.setString(2, utilisateur.getEmail());
             preparedStatement.setString(3, hashedPassword); // Utiliser le mot de passe haché
