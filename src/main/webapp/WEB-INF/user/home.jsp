@@ -29,6 +29,9 @@
 	<form action="create_post" method="get">
 		<input type="submit" value="poster  ">
 	</form>
+	<form action="read_posts" method="get">
+		<input type="submit" value="voir posts">
+	</form>
 	
 </body>
 </html>

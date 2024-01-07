@@ -128,7 +128,7 @@ public class update_post extends HttpServlet {
 		postBean.setDescription(description);
 		postBean.setImage(imageLink);
 		postDAO.update(postBean);
-		response.sendRedirect("posts");
+		response.sendRedirect("read_posts");
 	}
 
 }

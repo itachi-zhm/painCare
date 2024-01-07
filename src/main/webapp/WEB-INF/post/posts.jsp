@@ -25,7 +25,12 @@
     	<input type="submit" value="update">
     </form>
     <form action="delete_post" method="post">
+    	<input type="hidden" name = "post_id" value="${post.id }">
     	<input type="submit" value="delete">
+    </form>
+    <form action="post_details" method="get">
+    	<input type="hidden" name = "post_id" value="${post.id }">
+    	<input type="submit" value="voir">
     </form>
     <hr>
 </c:forEach>

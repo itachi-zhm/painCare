@@ -75,6 +75,18 @@ private dao_factory dao_factory;
 	@Override
 	public void delete(int post_id) {
 		// TODO Auto-generated method stub
+		Connection connexion = null;
+	    PreparedStatement preparedStatement = null;
+	    String query = "DELETE FROM posts WHERE id = ?;";
+	    try {
+			connexion = dao_factory.getConnection();
+			preparedStatement = connexion.prepareStatement(query);
+            preparedStatement.setInt(1, post_id);
+            preparedStatement.executeUpdate();
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 		
 	}
 
