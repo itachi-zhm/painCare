@@ -6,7 +6,8 @@ import java.sql.SQLException;
 
 import daos.post.post_dao;
 import daos.post.post_dao_impl;
-
+import daos.comment.comment_dao;
+import daos.comment.comment_dao_impl;
 
 
 public class dao_factory {
@@ -45,4 +46,7 @@ public class dao_factory {
         return new post_dao_impl(this);
     }
     
+    public comment_dao get_comment_dao() {
+        return new comment_dao_impl(this);
+    }
 }

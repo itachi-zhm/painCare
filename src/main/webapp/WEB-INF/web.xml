@@ -129,4 +129,24 @@
     <servlet-name>post_details</servlet-name>
     <url-pattern>/post_details</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>create_comment</display-name>
+    <servlet-name>create_comment</servlet-name>
+    <servlet-class>servlets.comment.create_comment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>create_comment</servlet-name>
+    <url-pattern>/create_comment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>delete_comment</display-name>
+    <servlet-name>delete_comment</servlet-name>
+    <servlet-class>servlets.comment.delete_comment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>delete_comment</servlet-name>
+    <url-pattern>/delete_comment</url-pattern>
+  </servlet-mapping>
 </web-app>

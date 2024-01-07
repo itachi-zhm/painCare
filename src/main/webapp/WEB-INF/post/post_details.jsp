@@ -12,6 +12,14 @@
             padding: 10px;
             margin: 20px;
         }
+        .comment-form {
+            margin-top: 20px;
+        }
+        .comment {
+            border: 1px solid #eee;
+            padding: 5px;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -23,10 +31,31 @@
         <p>Auteur: ${post.user_name}</p>
         <p>${post.id }</p>
         <img src="${post.image}" alt="Image du post">
-        
-        <!-- Ajoutez d'autres détails du post si nécessaire -->
 
         <hr>
+
+        <!-- Ajouter le formulaire de commentaire -->
+        <form class="comment-form" action="create_comment" method="post">
+            <label for="comment">Ajouter un commentaire :</label>
+            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+            <input type="hidden" name="post_id" value="${post.id}">
+            <input type="submit" value="Ajouter Commentaire">
+        </form>
+
+        <!-- Afficher tous les commentaires -->
+        <h2>Commentaires :</h2>
+        <c:forEach var="comments" items="${comments}">
+            <div class="comment">
+                <p>${comments.user_name} a dit :</p>
+                <p>${comments.content}</p>
+            </div>
+            <form action="delete_comment" method="post">
+
+            	<input type="hidden" name="comment_id" value="${comments.id}">
+            	<input type="hidden" name="post_id" value="${post.id}">
+            	<input type="submit" value="delete">
+            </from>
+        </c:forEach>
     </div>
 </c:if>
 
