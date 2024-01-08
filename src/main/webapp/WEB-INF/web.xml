@@ -90,6 +90,7 @@
     <servlet-name>create_post</servlet-name>
     <url-pattern>/create_post</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <description></description>
     <display-name>read_posts</display-name>
@@ -152,6 +153,16 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+
+    <display-name>welcomingpage</display-name>
+    <servlet-name>welcomingpage</servlet-name>
+    <servlet-class>servlets.welcomingpage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>welcomingpage</servlet-name>
+    <url-pattern>/welcomingpage</url-pattern>
+  </servlet-mapping>
+
     <display-name>painTest</display-name>
     <servlet-name>painTest</servlet-name>
     <servlet-class>servlets.pain.painTest</servlet-class>
@@ -170,4 +181,5 @@
 	<servlet-name>painCare</servlet-name>
 	<url-pattern>/pain</url-pattern>
   </servlet-mapping>
+
 </web-app>

@@ -28,7 +28,9 @@ import beans.user;
 public class update_user extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private user_dao utilisateur_dao;
-	private static final String WEB_CONTENT_DIR   = "C:/Users/zoube/eclipse-workspace/painCare/src/main/webapp/";
+	//C:/Users/Chacrone/Desktop/MoumaneProject/painCare/src/main/webapp
+	//C:/Users/zoube/eclipse-workspace/painCare/src/main/webapp/
+	private static final String WEB_CONTENT_DIR   = "C:/Users/Chacrone/Desktop/MoumaneProject/painCare/src/main/webapp";
 	private static final String AVATARS_DIR = "assets/avatars/";
 	public void init() throws ServletException {
     	dao_factory dao_Factory = dao_factory.getInstance();
