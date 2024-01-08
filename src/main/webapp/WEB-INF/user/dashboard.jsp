@@ -238,6 +238,23 @@
         </main>
         <script src="index.js"></script>
     <script>
+    console.log( "<%= request.getAttribute("data")%>")
+    function convertStringToArray(dataStr) {
+    // Step 1: Find all date-like strings in the input and wrap them in quotes
+    let formattedStr = dataStr.replace(/\b(\d{4}-\d{2}-\d{2})\b/g, '"$1"');
+
+    // Step 2: Replace the brackets with JSON array brackets
+    formattedStr = formattedStr.replace(/\[/g, '[').replace(/\]/g, ']');
+
+    // Step 3: Try to parse the string as JSON
+    try {
+        let dataArr = JSON.parse(formattedStr);
+        return dataArr;
+    } catch (e) {
+        console.error("Error converting string to array:", e);
+        return null; // or appropriate error handling
+    }
+}
         // Wait for the DOM to fully load
         document.addEventListener("DOMContentLoaded", function() {
             // Get the search button and input elements
@@ -271,10 +288,10 @@
         const lineChart = new Chart(lineCtx, {
             type: 'line',
             data: {
-                labels: ['01 janv', '02 janv', '03 janv', '04 janv', '05 janv', '06 janv'],
+                labels: [],
                 datasets: [{
                     label: 'Pain Average',
-                    data: [5, 7, 9, 2, 7, 3],
+                    data: convertStringToArray("<%= request.getAttribute("data")%>"),
                     borderWidth: 1
                 }]
             },
@@ -286,15 +303,43 @@
                 }
             }
         });
+		function changeArray(array, labels) {
+	        const inputArray = JSON.parse(array)
+	        var nonZeroCount = 0;
 
+	        for (var i = 0; i < inputArray.length; i++) {
+	            if (inputArray[i] !== 0) {
+	                nonZeroCount += inputArray[i];
+	            }
+	        }
+
+	        if (nonZeroCount > 0) {
+	            var percentage = (nonZeroCount / inputArray.length) * 100;
+
+	            // Change values different than 0 to represent the percentage
+	            for (var i = 0; i < inputArray.length; i++) {
+	                if (inputArray[i] !== 0) {
+	                    inputArray[i] = (inputArray[i]/nonZeroCount)*100;
+	                }
+	            }
+	            var nonZeroValues = inputArray.filter((value) => value !== 0);
+	            var nonZeroBodyParts = labels.filter((_, index) => inputArray[index] !== 0);
+	            // Print the modified array
+	            return {nonZeroValues, nonZeroBodyParts}
+	        } else {
+	            console.log("No values different than 0 found in the array.");
+	        }
+	    }
+		console.log()
+		const {nonZeroValues, nonZeroBodyParts} = changeArray("<%= request.getAttribute("data1")%>", ['Abdomen','Back', 'Chest','Head','Neck','Hips'])
         // Configuration for pie chart
         const pieCtx = document.getElementById('myChart1').getContext('2d');
         const pieConfig = {
             type: 'pie',
             data: {
-                labels: ['Head', 'Chest', 'Abdomen','Back','Neck'],
+                labels: nonZeroBodyParts,
                 datasets: [{
-                    data: [12.2, 23.8, 20,40,4],
+                    data: nonZeroValues,
                     backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(255, 205, 86, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(26, 195, 106, 0.2)', 'rgba(174, 92, 115, 0.2)'],
                     borderColor: ['rgba(255, 99, 132, 1)', 'rgba(255, 205, 86, 1)', 'rgba(54, 162, 235, 1)', 'rgba(26, 195, 106, 1)', 'rgba(174, 92, 115, 1)'],
                     borderWidth: 1

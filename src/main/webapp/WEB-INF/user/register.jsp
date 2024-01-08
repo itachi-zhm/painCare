@@ -42,7 +42,7 @@
             </button>
         </div>
     </div>
-    <span class="agreement">Already have an account<a href="#" style="font-size: 15px"> sign in here</a></span>
+    <span class="agreement">Already have an account<a href="/painCare/login" style="font-size: 15px"> sign in here</a></span>
 </div>
 </body>
 </html>

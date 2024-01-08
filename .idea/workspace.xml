@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3bd7182a-de6d-4918-bde9-f2463910e0df" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/build/classes/servlets/home_page.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/servlets/home_page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/servlets/pain/painTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/servlets/pain/painTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/servlets/post/create_post.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/servlets/post/create_post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/home_page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/home_page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/pain/painTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/pain/painTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/post/create_post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/post/create_post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/user/register.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2agH4tzEReKkC6KdDx0pZ9uQgsX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "chacrone",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3bd7182a-de6d-4918-bde9-f2463910e0df" name="Changes" comment="" />
+      <created>1704733116934</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704733116934</updated>
+      <workItem from="1704733117423" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

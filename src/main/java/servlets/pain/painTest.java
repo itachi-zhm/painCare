@@ -20,11 +20,11 @@ import java.io.IOException;
 @WebServlet(name = "painTest", value = "/painTest")
 public class  painTest extends HttpServlet {
     private painTestDao painTestDao;
-    private user_dao userDAO;
+    private user_dao user_dao;
     public void init() {
     	dao_factory dao_Factory = dao_factory.getInstance();
         this.painTestDao = new painTestDaoImpl(dao_Factory);
-        this.userDAO = dao_Factory.get_user_dao();
+        this.user_dao = dao_Factory.get_user_dao();
 
     }
     @Override
@@ -35,6 +35,11 @@ public class  painTest extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	user user = user_dao.get_session(request);
+		if(user == null) {
+			request.getRequestDispatcher("/WEB-INF/user/login.jsp").forward(request, response);
+			return;
+		}
     	
 		
         float startPeriod =Float.parseFloat(request.getParameter("startPeriod"));
@@ -71,7 +76,7 @@ public class  painTest extends HttpServlet {
         }
         testBean bean = new testBean();
         bean.setResult(result);
-        bean.setUser_id(1);
+        bean.setUser_id(user.getId());
 
         painTestDao.create(bean);
 

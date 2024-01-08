@@ -81,8 +81,8 @@
 <!--                <i class='bx bx-bell'></i>-->
 <!--                <span class="count">12</span>-->
 <!--            </a>-->
-<c:if test="${sessionScope.user ne null}">
-<p><strong>Nom:</strong> ${sessionScope.user.name}</p>
+			<c:if test="${sessionScope.user ne null}">
+			
             <a href="#" class="profile">
                 <img src="${sessionScope.user.avatar}" alt="Avatar de ${sessionScope.user.name}">
                 

@@ -114,7 +114,7 @@ public class create_post extends HttpServlet {
 
 		String imageLink = savePart(image);
 		blogDAO.create(userBean.getId(), title, description, imageLink);
-		response.sendRedirect("posts");
+		response.sendRedirect("home_page");
 		
 		
 	}

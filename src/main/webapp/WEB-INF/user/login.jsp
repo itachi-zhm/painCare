@@ -41,7 +41,7 @@
             </button>
         </div>
     </div>
-    <span    class="agreement">You don't have an account yet<a href="#"> Register here</a></span>
+    <span    class="agreement">You don't have an account yet<a href="/painCare/register"> Register here</a></span>
 </div>
 </body>
 </html>
