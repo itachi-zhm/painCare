@@ -3,12 +3,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Détails du Post</title>
+
+    <title>Dï¿½tails du Post</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://use.fontawesome.com/f5ea91e308.js"></script>
     <link rel="stylesheet" href="./assets/css/postdetails.css" type="text/css">
     <style>
-        /* Ajoutez vos styles personnalisés ici */
+        /* Ajoutez vos styles personnalisï¿½s ici */
+
         .post-details {
             border: 1px solid #ccc;
             padding: 10px;
@@ -25,6 +27,7 @@
     </style>
 </head>
 <body>
+
 <%@include file="/WEB-INF/navbar.jsp" %>
 <c:if test="${post ne null}">
     <div class="cards">
@@ -48,7 +51,7 @@
         <div class="comment-section">
     <h2>Ajouter un commentaire :</h2>
     <form class="comment-form" action="create_comment" method="post">
-        <textarea id="comment" name="comment" placeholder="Écrivez votre commentaire ici..." required></textarea>
+        <textarea id="comment" name="comment" placeholder="ï¿½crivez votre commentaire ici..." required></textarea>
         <input type="hidden" name="post_id" value="${post.id}">
         <button type="submit" class="submit-button">Publier</button>
     </form>
@@ -73,6 +76,7 @@
         </div>
     </c:forEach>
 </div>
+
 </c:if>
 
 </body>

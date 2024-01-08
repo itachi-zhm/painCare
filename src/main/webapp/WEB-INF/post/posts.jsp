@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Liste des Posts</title>
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://use.fontawesome.com/f5ea91e308.js"></script>
     <link rel="stylesheet" href="./assets/css/posts.css" type="text/css">
@@ -42,5 +43,6 @@
 </c:forEach>
 <script src="./assets/js/posts.js"></script>
 </div>
+
 </body>
 </html>

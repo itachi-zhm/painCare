@@ -52,27 +52,87 @@ private dao_factory dao_factory;
 	}
 
 	@Override
-	public void update(post blog) {
+	public void update(post post) {
 		// TODO Auto-generated method stub
+		Connection connexion = null;
+		PreparedStatement preparedStatement = null;
+		String query_post = "UPDATE posts SET title = ?, description = ?, image = ? WHERE id = ?;";
+		try {
+			connexion = dao_factory.getConnection();
+			preparedStatement = connexion.prepareStatement(query_post);
+            preparedStatement.setString(1, post.getTitle());
+            preparedStatement.setString(2, post.getDescription()); 
+            preparedStatement.setString(3, post.getImage()); 
+            preparedStatement.setInt(4, post.getId()); 
+            preparedStatement.executeUpdate();
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 		
 	}
 
 	@Override
-	public void delete(int blog_id) {
+	public void delete(int post_id) {
 		// TODO Auto-generated method stub
+		Connection connexion = null;
+	    PreparedStatement preparedStatement = null;
+	    String query = "DELETE FROM posts WHERE id = ?;";
+	    try {
+			connexion = dao_factory.getConnection();
+			preparedStatement = connexion.prepareStatement(query);
+            preparedStatement.setInt(1, post_id);
+            preparedStatement.executeUpdate();
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 		
 	}
 
 	@Override
 	public ArrayList<post> all() {
 		// TODO Auto-generated method stub
-		return null;
+		Connection connexion = null;
+	    PreparedStatement preparedStatement = null;
+	    ResultSet resultSet = null;
+	    ArrayList<post> list = new ArrayList<post>();
+	    String query ="SELECT posts.*, users.name AS user_name FROM posts JOIN users ON posts.user_id = users.id ORDER BY id DESC;";
+	    try { 
+	    	connexion = dao_factory.getConnection();
+			preparedStatement = connexion.prepareStatement(query);
+			resultSet = preparedStatement.executeQuery();
+
+	    	while(resultSet.next()) 
+	    		list.add(getBean(resultSet));
+	    	
+	    } catch (SQLException e) {
+         e.printStackTrace();
+	    }
+	    
+	    return list;
 	}
 
 	@Override
-	public post one(int blog_id) {
+	public post one(int post_id) {
 		// TODO Auto-generated method stub
-		return null;
+		Connection connexion = null;
+	    PreparedStatement preparedStatement = null;
+	    ResultSet resultSet = null;
+	    post bean=null;
+	    String query ="SELECT posts.*, users.name AS user_name FROM posts JOIN users ON posts.user_id = users.id WHERE posts.id = ?;";
+	    try { 
+	    	connexion = dao_factory.getConnection();
+			preparedStatement = connexion.prepareStatement(query);
+			preparedStatement.setInt(1, post_id);
+			resultSet = preparedStatement.executeQuery();
+			bean = resultSet.next() ? getBean(resultSet) : null;
+	    	
+	    } catch (SQLException e) {
+         e.printStackTrace();
+	    }
+	    
+	    return bean;
 	}
 
 }
