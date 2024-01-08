@@ -89,4 +89,77 @@
     <servlet-name>create_post</servlet-name>
     <url-pattern>/create_post</url-pattern>
   </servlet-mapping>
+<<<<<<< Updated upstream
+=======
+  <servlet>
+    <description></description>
+    <display-name>read_posts</display-name>
+    <servlet-name>read_posts</servlet-name>
+    <servlet-class>servlets.post.read_posts</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>read_posts</servlet-name>
+    <url-pattern>/read_posts</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>update_post</display-name>
+    <servlet-name>update_post</servlet-name>
+    <servlet-class>servlets.post.update_post</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>update_post</servlet-name>
+    <url-pattern>/update_post</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>delete_post</display-name>
+    <servlet-name>delete_post</servlet-name>
+    <servlet-class>servlets.post.delete_post</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>delete_post</servlet-name>
+    <url-pattern>/delete_post</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>post_details</display-name>
+    <servlet-name>post_details</servlet-name>
+    <servlet-class>servlets.post.post_details</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>post_details</servlet-name>
+    <url-pattern>/post_details</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>create_comment</display-name>
+    <servlet-name>create_comment</servlet-name>
+    <servlet-class>servlets.comment.create_comment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>create_comment</servlet-name>
+    <url-pattern>/create_comment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>delete_comment</display-name>
+    <servlet-name>delete_comment</servlet-name>
+    <servlet-class>servlets.comment.delete_comment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>delete_comment</servlet-name>
+    <url-pattern>/delete_comment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>welcomingpage</display-name>
+    <servlet-name>welcomingpage</servlet-name>
+    <servlet-class>servlets.welcomingpage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>welcomingpage</servlet-name>
+    <url-pattern>/welcomingpage</url-pattern>
+  </servlet-mapping>
+>>>>>>> Stashed changes
 </web-app>
