@@ -1,0 +1,103 @@
+@charset "ISO-8859-1";
+/* Base styling */
+body {
+    font-family: 'Public Sans', sans-serif;
+    background: #f4f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Card Styling */
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.card-header {
+    background: #007bff;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+h4 {
+    color: #333333;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-check {
+    margin-bottom: 15px;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Full-width minus padding and border */
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.formbold-back-btn {
+    background: #6c757d; /* Gray */
+}
+
+.formbold-btn {
+    background: #007bff; /* Blue */
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Add more styling according to your preference */

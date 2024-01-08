@@ -13,9 +13,7 @@ import beans.user;
 import daos.dao_factory;
 import daos.user_dao;
 
-/**
- * Servlet implementation class login
- */
+
 @WebServlet(name="login", value= {"/login"})
 public class login extends HttpServlet {
 	private static final long serialVersionUID = 1L;

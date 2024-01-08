@@ -207,14 +207,14 @@ button.list-group-item-primary.active {
 
 .btn-primary {
   color: #fff;
-  background-color: #696cff;
-  border-color: #696cff;
+  background-color: #f2c8c0;
+  border-color: #bf9d97;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4);
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #5f61e6;
-  border-color: #5f61e6;
+  background-color: #f7e6d4;
+  border-color: #c3b6a8;
   transform: translateY(-1px);
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary.focus {
@@ -316,15 +316,15 @@ button.list-group-item-primary.active {
 }
 
 .form-check-input:focus {
-  border-color: #696cff;
+  border-color: #bf9d97;
   box-shadow: 0 2px 4px 0 rgba(105, 108, 255, 0.4);
 }
 .form-check-input:disabled {
   background-color: #eceef1;
 }
 .form-check-input:checked, .form-check-input[type=checkbox]:indeterminate {
-  background-color: #696cff;
-  border-color: #696cff;
+  background-color: #bf9d97;
+  border-color: #e5bcb5;
   box-shadow: 0 2px 4px 0 rgba(105, 108, 255, 0.4);
 }
 

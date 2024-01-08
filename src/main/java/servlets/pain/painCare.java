@@ -44,6 +44,6 @@ public class painCare extends HttpServlet {
         pain.setFeeling(feeling);
         pain.setId_user(user_id);
         painDao.create(pain);
-        response.sendRedirect(request.getContextPath() + "/");
+        response.sendRedirect("home_page");
     }
 }

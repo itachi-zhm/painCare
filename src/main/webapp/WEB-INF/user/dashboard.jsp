@@ -33,18 +33,18 @@
             <!-- Insights -->
             <ul class="insights">
                 <li>
-                    <a href="">
+                    <a href="/painCare/pain">
                     <img src="./assets/images/evaluation.png">
                     <span class="info">
                         <h3>
-                            Last score
+                            Update your score
                         </h3>
                         <p>Update your score regularly</p>
                     </span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="/painCare/test">
                     <img src="./assets/images/LogoTest.png" >
                     <span class="info">
                         <h3>
@@ -66,7 +66,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="/painCare/welcomingpage">
                     <img src="./assets/images/bibliotheque.png">
                     <span class="info">
                         <h3>

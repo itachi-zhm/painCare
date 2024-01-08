@@ -15,7 +15,6 @@
     <servlet-name>testconnect</servlet-name>
     <servlet-class>test_connexion_db.testconnect</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>testconnect</servlet-name>
     <url-pattern>/testconnect</url-pattern>
@@ -90,7 +89,6 @@
     <servlet-name>create_post</servlet-name>
     <url-pattern>/create_post</url-pattern>
   </servlet-mapping>
-
   <servlet>
     <description></description>
     <display-name>read_posts</display-name>
@@ -153,7 +151,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-
     <display-name>welcomingpage</display-name>
     <servlet-name>welcomingpage</servlet-name>
     <servlet-class>servlets.welcomingpage</servlet-class>
@@ -162,14 +159,15 @@
     <servlet-name>welcomingpage</servlet-name>
     <url-pattern>/welcomingpage</url-pattern>
   </servlet-mapping>
-
+  <servlet>
+    <description></description>
     <display-name>painTest</display-name>
     <servlet-name>painTest</servlet-name>
     <servlet-class>servlets.pain.painTest</servlet-class>
   </servlet>
   <servlet-mapping>
-	<servlet-name>painTest</servlet-name>
-	<url-pattern>/test</url-pattern>
+    <servlet-name>painTest</servlet-name>
+    <url-pattern>/test</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -178,8 +176,37 @@
     <servlet-class>servlets.pain.painCare</servlet-class>
   </servlet>
   <servlet-mapping>
-	<servlet-name>painCare</servlet-name>
-	<url-pattern>/pain</url-pattern>
+    <servlet-name>painCare</servlet-name>
+    <url-pattern>/pain</url-pattern>
   </servlet-mapping>
-
+  <servlet>
+    <description></description>
+    <display-name>firstPage</display-name>
+    <servlet-name>firstPage</servlet-name>
+    <servlet-class>servlets.firstPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>firstPage</servlet-name>
+    <url-pattern>/firstPage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Welcome</display-name>
+    <servlet-name>Welcome</servlet-name>
+    <servlet-class>servlets.Welcome</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Welcome</servlet-name>
+    <url-pattern>/Welcome</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestServ</display-name>
+    <servlet-name>TestServ</servlet-name>
+    <servlet-class>servlets.TestServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServ</servlet-name>
+    <url-pattern>/TestServ</url-pattern>
+  </servlet-mapping>
 </web-app>

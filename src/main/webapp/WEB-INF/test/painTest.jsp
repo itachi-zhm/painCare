@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: DELL
-  Date: 1/4/2024
-  Time: 3:13 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -45,6 +38,7 @@
     <script src="./assets/js/config.js"></script>
 </head>
 <body>
+<%@include file="/WEB-INF/navbar.jsp" %>
 <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
         <!-- Menu -->

@@ -61,6 +61,7 @@
 </head>
 
 <body>
+<%@include file="/WEB-INF/navbar.jsp" %>
 <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
         <!-- Menu -->
