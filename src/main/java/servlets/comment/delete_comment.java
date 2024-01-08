@@ -49,7 +49,6 @@ public class delete_comment extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		user userBean = userDAO.get_session(request);
-		System.out.println("////////////////////////////");
 		if(userBean == null) {
 			response.sendRedirect("login");
 			return;
@@ -68,7 +67,6 @@ public class delete_comment extends HttpServlet {
 				response.sendError(403);
 				return;
 			}
-			System.out.println("**********************"+comment_id);
 			commentDAO.delete(Integer.parseInt(comment_id));
 			
 			response.sendRedirect("post_details?post_id=" + blog_id);

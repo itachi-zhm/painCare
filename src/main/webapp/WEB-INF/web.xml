@@ -15,6 +15,7 @@
     <servlet-name>testconnect</servlet-name>
     <servlet-class>test_connexion_db.testconnect</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>testconnect</servlet-name>
     <url-pattern>/testconnect</url-pattern>
@@ -148,5 +149,25 @@
   <servlet-mapping>
     <servlet-name>delete_comment</servlet-name>
     <url-pattern>/delete_comment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>painTest</display-name>
+    <servlet-name>painTest</servlet-name>
+    <servlet-class>servlets.pain.painTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>painTest</servlet-name>
+	<url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>painCare</display-name>
+    <servlet-name>painCare</servlet-name>
+    <servlet-class>servlets.pain.painCare</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>painCare</servlet-name>
+	<url-pattern>/pain</url-pattern>
   </servlet-mapping>
 </web-app>
